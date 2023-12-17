@@ -26,6 +26,6 @@ This portfolio website serves as a platform to display my work, skills, and acco
 ## Technologies Used
 
 - HTML5
-- CSS3 (Sass/SCSS)
+- CSS
 - JavaScript
 
