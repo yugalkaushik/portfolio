@@ -7,10 +7,6 @@ This repository contains the code for my personal portfolio website. It showcase
 - [About](#about)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
