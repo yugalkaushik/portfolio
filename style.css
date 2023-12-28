@@ -371,3 +371,9 @@ footer p{
     background-color: none;
     text-decoration: none;
 }
+/* .about-pic{
+    filter: grayscale(100%);
+}
+.about-pic:hover{
+    filter: grayscale(0%);
+} */
