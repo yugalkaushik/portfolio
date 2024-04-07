@@ -53,6 +53,9 @@ a:hover{
     text-underline-offset: 1rem;
     text-decoration-color:rgb(181,181,181) ;
 }
+.text-container{
+    align-items: center;
+}
 
 .logo{
 font-size: 2rem;
