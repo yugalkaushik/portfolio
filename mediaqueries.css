@@ -6,6 +6,9 @@
     .about-container{
         flex-wrap: wrap;
     }
+    .text-container{
+        text-align: center;
+    }
 }
 @media screen and (max-width:1200px) {
     #desktop-nav{
@@ -37,6 +40,9 @@
     }
     .about-container{
         margin: top 0;
+    }
+    .text-container{
+        text-align: center;
     }
 }
 
