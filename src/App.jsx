@@ -7,8 +7,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="min-h-screen min-w-screen bg-white">
-      <div className="absolute inset-0 z-0">
+    <div className="min-h-screen min-w-screen bg-white relative">
+      <div className="fixed inset-0 z-0">
         <ShootingStars
           minSpeed={10}
           maxSpeed={30}
@@ -23,7 +23,7 @@ function App() {
       <div className="relative z-10">
         <Landing />
       </div>
-      <div className="fixed inset-0 z-50 pointer-events-none">
+      <div className="fixed inset-0 z-50 pointer-events-none hidden md:block">
         <Cursor />
       </div>
     </div>
