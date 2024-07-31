@@ -28,7 +28,7 @@ const items = [
 
 const BentoGridItem = ({ title, description, image, github, deployed, className }) => {
   return (
-    <div className={`p-4 bg-white border-2 border-black rounded-xl shadow ${className}`}>
+    <div className='p-4 bg-white border-2 border-black rounded-xl shadow ${className}'>
       <div className="mb-4 border border-gray-700  rounded-xl">
         <img src={image} alt={title} className="w-full h-32 object-cover rounded-xl" />
       </div>

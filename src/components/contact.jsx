@@ -13,42 +13,41 @@ export function Contact() {
   ];
 
   return (
-    <div className="flex flex-col items-center lg:mt-40 z-50 mb">
+    <div className="flex flex-col items-center mt-12 lg:mt-40 z-50">
       <h5 className="mb-2 text-gray-500">Get In Touch</h5>
       <h1 className="text-3xl lg:text-4xl font-roboto font-semibold">CONTACT ME</h1>
       <div className="flex justify-center items-center mb-2">
-        {socialLinks.map((social, idx) => (
-          <motion.div
-            key={"images" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            className="rounded-2xl -mr-4 mt-4 p-1 bg-white border-black border flex-shrink-0 overflow-hidden"
-          >
-            <a href={social.url} target="_blank" rel="noopener noreferrer">
-              <img
-                src={social.src}
-                alt="Socials"
-                width="100"
-                height="100"
-                className=""
-              />
-            </a>
-          </motion.div>
-        ))}
-      </div>
-      <div className="py-1 m-4 flex flex-wrap border rounded-xl text-black justify-center max-w-sm mx-auto">
+  {socialLinks.map((social, idx) => (
+    <motion.div
+      key={"images" + idx}
+      style={{
+        rotate: Math.random() * 20 - 10,
+      }}
+      whileHover={{
+        scale: 1.1,
+        rotate: 0,
+        zIndex: 100,
+      }}
+      className="rounded-xl -mr-4 mt-4 p-1 bg-white border-black border flex-shrink-0 overflow-hidden"
+    >
+      <a href={social.url} target="_blank" rel="noopener noreferrer">
+        <img
+          src={social.src}
+          alt="Socials"
+          className="w-14 h-14 md:w-12 md:h-12 lg:w-32 lg:h-32 object-cover"
+        />
+      </a>
+    </motion.div>
+  ))}
+</div>
+
+      <div className="py-1 m-2 flex flex-wrap border rounded-xl text-black justify-center">
         <div className="flex items-center justify-center transition-transform duration-300 hover:scale-125">
-          <img src={mail} alt="mail" className="pl-8"/>
-          <a className="ml-2 p-1 pr-8">yugalkaushik14@gmail.com</a>
+          <img src={mail} alt="mail" className="pl-3 lg:pl-8"/>
+          <a className="ml-2 p-1 pr-3 lg:pr-8">yugalkaushik14@gmail.com</a>
         </div>
       </div>
-      <div className="py-4 w-2/3 lg:w-1/3 mb-32 lg:mb-2">
+      <div className="py-4 w-2/3 lg:w-1/3 mb-1 lg:mb-2">
         <form
           action="https://formsubmit.co/yugalkaushik14@gmail.com"
           method="POST"

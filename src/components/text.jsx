@@ -10,14 +10,14 @@ const Text = () => {
   };
 
   return (
-    <div className="flex flex-col items-start lg:ml-40 lg:mt-56 mt-20 px-4 lg:px-0 z-40 w-full lg:w-5/12">
-      <h1 className="text-5xl sm:text-7xl lg:text-9xl font-teko text-black">
+    <div className="flex flex-col items-center lg:ml-40 lg:mt-56 mt-20 lg:px-0 z-40 lg:w-5/12">
+      <h1 className="text-3xl lg:text-9xl font-teko text-black">
         Hi, I'm
       </h1>
-      <h1 className="text-5xl sm:text-7xl lg:text-9xl font-teko text-purple-800">
+      <h1 className="text-5xl lg:text-9xl font-teko text-purple-800">
         YUGAL KAUSHIK
       </h1>
-      <p className="text-base sm:text-lg lg:text-xl text-gray-600">
+      <p className="text-base lg:text-xl text-center text-gray-600">
         {renderWords(paragraph, 'text-gray-600')}
       </p>
     </div>

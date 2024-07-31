@@ -26,27 +26,17 @@ const Landing = () => {
                     </div>
                 </div>
             </nav>
-            <div className="flex flex-col mt-1 lg:mt-2 lg:flex-row items-center lg:items-start px-4 md:px-8 lg:px-0">
+            <div className="flex flex-col mt-1 lg:mt-2 lg:flex-row px-4 md:px-8 lg:px-0">
                 <Text />
-                <div className="relative mt-10 lg:mt-40 lg:ml-40 flex justify-center items-center w-full lg:w-auto">
-                    <div
-                        className="absolute inset-0 bg-gradient-to-r from-black via-[#ffffff] to-black blur-md filter opacity-90 rounded-2xl"
-                        style={{
-                            transform: "scale(1.05)",
-                            transformOrigin: "center",
-                            zIndex: -1,
-                            width: "100%",
-                            height: "100%",
-                        }}
-                    ></div>
-                    <img src={profile} className=" max-w-sm md:max-w-md lg:h-96 rounded-3xl" alt="Profile" />
+                <div className="relative mt-6 lg:mt-40 lg:ml-40 flex justify-center items-center w-full lg:w-auto">
+                    <img src={profile} className="lg:h-96 rounded-3xl" alt="Profile" />
                 </div>
             </div>
             <div>
                 <Skills />
             </div>
-            <div className="lg:mt-20 px-4 md:px-8 lg:px-0 mb-24">
-                <div className="flex flex-col items-center mt-24 mb-10">
+            <div className="px-4 lg:px-0 lg:mb-24">
+                <div className="flex flex-col items-center mt-10 lg:mt-24 mb-6">
                     <h5 className="mb-2 text-gray-500">Browse My</h5>
                     <h1 className="text-3xl lg:text-4xl font-roboto font-semibold">PROJECTS</h1>
                 </div>  

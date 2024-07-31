@@ -33,16 +33,16 @@ const Skills = () => {
                 <h1 className="text-3xl lg:text-4xl font-roboto font-semibold">EXPERIENCE</h1>
             </div>
             <div className="flex flex-col items-center  mt-2 lg:mt-10">
-                <p className="text-gray-600 mb-8 pr-2 pl-3 lg:pr-0 lg:pl-0">My resume provides a comprehensive look at the significant projects I've managed, relevant experience, acquired skills, and the meaningful contributions I've made.</p>
+                <p className="text-gray-600 text-center mb-4 lg:mb-8 pr-2 pl-3 lg:pr-0 lg:pl-0">My resume provides a comprehensive look at the significant projects I've managed, relevant experience, acquired skills, and the meaningful contributions I've made.</p>
                 <button 
-                    className="border-2 border-black rounded-md hover:bg-black hover:text-white p-2 lg:m-1  font-varela w-1/3"
+                    className="border-2 border-black rounded-md hover:bg-black hover:text-white p-2 lg:m-1  font-varela w-5/12 lg:w-1/3"
                     onClick={openResume}
                 >
                     RESUME
                 </button>
             </div>
-            <div className="flex flex-col p-2 mt-10 lg:w-2/3 w-4/5  max-w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="flex flex-col p-2 mt-4 lg:mt-10 lg:w-2/3 w-4/5">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4">
                     <div className="flex flex-col items-center m-2 border-2 p-2 rounded-lg border-neutral-950">
                         <h1 className="text-xl lg:text-2xl p-2 mb-4">Languages</h1>
                         <div className="flex flex-row space-x-6 mb-4">
