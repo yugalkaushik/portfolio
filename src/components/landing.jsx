@@ -26,7 +26,7 @@ const Landing = () => {
                     </div>
                 </div>
             </nav>
-            <div className="flex flex-col mt-1 lg:mt-2 md:flex-row px-4 md:px-8 lg:px-0">
+            <div className="flex flex-col mt-1 md:mt-2 md:flex-row px-4 md:px-8 lg:px-0">
                 <Text />
                 <div className="relative mt-6 lg:mt-40 lg:ml-40 flex justify-center items-center w-full lg:w-auto">
                     <img src={profile} className="lg:h-96 rounded-3xl" alt="Profile" />
