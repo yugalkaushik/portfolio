@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { ShootingStars } from './components/shooting-stars';
+import Cursor from './components/cursor';
+import Landing from './components/landing';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen min-w-screen bg-white">
+      <div className="absolute inset-0 z-0">
+        <ShootingStars
+          minSpeed={10}
+          maxSpeed={30}
+          minDelay={1000}
+          maxDelay={1100}
+          starColor="#9E00FF"
+          trailColor="#2EB9DF"
+          starWidth={12}
+          starHeight={5}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="relative z-10">
+        <Landing />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div className="fixed inset-0 z-50 pointer-events-none">
+        <Cursor />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
