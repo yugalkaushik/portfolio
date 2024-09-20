@@ -18,6 +18,19 @@ const items = [
     github: "https://github.com/yugalkaushik/student-management"
   },
   {
+    title: "Nova",
+    description: "Chatbot that suggests website for a specific task",
+    image: talkify,
+    github: "https://github.com/yugalkaushik/text-to-speech",
+    deployed: "https://yugalkaushik.github.io/text-to-speech/"
+  },
+  {
+    title: "DataExtractAI",
+    description: "AI-powered image processing model that scans images containing measurements such as weight, height, and other metrics, and extracts relevant data",
+    image: talkify,
+    github: "https://github.com/yugalkaushik/text-to-speech",
+  },
+  {
     title: "TALKIFY",
     description: "Talkify is a user-friendly web application that transforms text into spoken language, featuring an intuitive interface for easy text entry, voice selection, and speech conversion. It ensures a responsive design for a seamless experience across various devices and screen sizes.",
     image: talkify,
