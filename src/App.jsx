@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ShootingStars } from './components/shooting-stars';
-import Cursor from './components/cursor';
 import Landing from './components/landing';
 
 function App() {
