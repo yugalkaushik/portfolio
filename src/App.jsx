@@ -23,9 +23,6 @@ function App() {
       <div className="relative z-10">
         <Landing />
       </div>
-      <div className="fixed inset-0 z-50 pointer-events-none hidden md:block">
-        <Cursor />
-      </div>
     </div>
   );
 }
