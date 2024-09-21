@@ -2,7 +2,7 @@ import React from "react";
 import avatar from "../assets/avatar.png";
 import Text from "./text";
 import profile from "../assets/profile.jpg";
-import { BentoGrid } from "./grid";
+import BentoGrid from "./grid";
 import Skills from "./skills";
 import { Contact } from "./contact";
 
