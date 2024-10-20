@@ -18,7 +18,7 @@ const ToolTip = ({ text, children }) => {
                 </div>
             )}
         </div>
-    );
+    );0
 };
 
 const Skills = () => {
