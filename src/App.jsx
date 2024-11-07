@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { ShootingStars } from './components/shooting-stars';
-import Landing from './components/landing';
+import { useState } from "react";
+import { ShootingStars } from "./components/shooting-stars";
+import Landing from "./components/landing";
 
 function App() {
   const [count, setCount] = useState(0);

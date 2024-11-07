@@ -50,17 +50,26 @@ const items = [
   },
 ];
 
-const BentoGridItem = ({ title, description, image, github, deployed, className }) => {
+const BentoGridItem = ({
+  title,
+  description,
+  image,
+  github,
+  deployed,
+  className,
+}) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className={`p-4 bg-white border-2 border-black rounded-xl shadow ${className}`}>
+    <div
+      className={`p-4 bg-white border-2 border-black rounded-xl shadow ${className}`}
+    >
       <div className="mb-4 border border-gray-700 rounded-xl">
         {!imageLoaded && <Skeleton />}
         <img
           src={image}
           alt={title}
-          className={`w-full h-32 object-cover rounded-xl ${!imageLoaded ? 'hidden' : ''}`}
+          className={`w-full h-32 object-cover rounded-xl ${!imageLoaded ? "hidden" : ""}`}
           onLoad={() => setImageLoaded(true)}
         />
       </div>

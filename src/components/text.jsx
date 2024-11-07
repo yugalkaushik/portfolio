@@ -1,11 +1,18 @@
-import React from 'react';
+import React from "react";
 
 const Text = () => {
-  const paragraph = "I bring a unique blend of creativity and technical expertise to develop exceptional and innovative software experiences.";
+  const paragraph =
+    "I bring a unique blend of creativity and technical expertise to develop exceptional and innovative software experiences.";
 
   const renderWords = (text, additionalClasses) => {
     return text.split(" ").map((word, idx) => (
-      <span key={idx} className={`animate-fadeInDelayed ${additionalClasses}`} style={{ animationDelay: `${idx * 0.2}s` }}>{word} </span>
+      <span
+        key={idx}
+        className={`animate-fadeInDelayed ${additionalClasses}`}
+        style={{ animationDelay: `${idx * 0.2}s` }}
+      >
+        {word}{" "}
+      </span>
     ));
   };
 
@@ -18,7 +25,7 @@ const Text = () => {
         YUGAL KAUSHIK
       </h1>
       <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center text-gray-600">
-        {renderWords(paragraph, 'text-gray-600')}
+        {renderWords(paragraph, "text-gray-600")}
       </p>
     </div>
   );
