@@ -3,7 +3,7 @@ import sparkle from "../assets/sparkle.png";
 import sms from "../assets/sms.png";
 import talkify from "../assets/talkify.png";
 import chatbot from "../assets/chatbot.png";
-import dataextract from "../assets/dataextract1.png";
+import dataextract from "../assets/dataextract.png";
 
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-32 min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
