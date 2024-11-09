@@ -99,40 +99,40 @@ const Skills = () => {
             <h1 className="text-xl lg:text-2xl p-2 mb-4">
               Frameworks & Libraries
             </h1>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-row gap-6 md:space-x-6 mb-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:flex md:flex-row gap-6 md:space-x-2 mb-4">
               <ToolTip text="React - A JavaScript library for building user interfaces.">
                 <img
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                   alt="react"
-                  className="w-12 h-12 md:w-10 md:h-10"
+                  className="w-12 h-12 md:w-32 md:h-16"
                 />
               </ToolTip>
               <ToolTip text="Node.js - A JavaScript runtime built on Chrome's V8 JavaScript engine.">
                 <img
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
                   alt="nodejs"
-                  className="w-12 h-12 md:w-10 md:h-10"
+                  className="w-12 h-12 md:w-32 md:h-16"
                 />
               </ToolTip>
               <ToolTip text="Express - A minimal and flexible Node.js web application framework.">
                 <img
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
                   alt="express"
-                  className="w-12 h-12 md:w-10 md:h-10"
+                  className="w-12 h-12 md:w-32 md:h-16"
                 />
               </ToolTip>
               <ToolTip text="Tailwind CSS - A utility-first CSS framework for creating custom designs.">
                 <img
                   src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
                   alt="tailwind"
-                  className="w-12 h-12 md:w-10 md:h-10"
+                  className="w-12 h-12 md:w-32"
                 />
               </ToolTip>
               <ToolTip text="GraphQL - A query language for APIs and a runtime for executing those queries.">
                 <img
                   src="https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain-wordmark.svg"
                   alt="graphql"
-                  className="w-12 h-12 md:w-10 md:h-10"
+                  className="w-12 h-12 md:w-32"
                 />
               </ToolTip>
               <ToolTip text="Axios - A promise-based HTTP client for the browser and Node.js.">
