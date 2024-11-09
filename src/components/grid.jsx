@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import sparkle from "../assets/sparkle.png";
 import sms from "../assets/sms.png";
-import talkify from "../assets/talkify.png";
+import explora from "../assets/explora.png";
 import chatbot from "../assets/chatbot.png";
 import dataextract from "../assets/dataextract.png";
 
@@ -41,12 +41,12 @@ const items = [
     github: "https://github.com/yugalkaushik/dataextract",
   },
   {
-    title: "TALKIFY",
+    title: "Explora",
     description:
-      "Talkify is a web app that transforms text into spoken language, featuring an intuitive interface for easy text entry, voice selection, and speech conversion.",
-    image: talkify,
-    github: "https://github.com/yugalkaushik/text-to-speech",
-    deployed: "https://yugalkaushik.github.io/text-to-speech/",
+    "A comprehensive platform offering curated travel itineraries, insightful blogs, and recommended destinations to enhance your travel planning experience. Built with Next.js, TypeScript, and MongoDB for a scalable, efficient, and user-focused application.",
+    image: explora,
+    github: "https://github.com/yugalkaushik/explora",
+    deployed: "https://letsexplora.vercel.app",
   },
 ];
 
