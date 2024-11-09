@@ -26,7 +26,7 @@ const items = [
     github: "https://github.com/yugalkaushik/student-management",
   },
   {
-    title: "Nova Chatbot",
+    title: "NOVA",
     description:
       "Chatbot that suggests websites for a specific task, using an NLP-based approach for data prediction.",
     image: chatbot,
@@ -34,14 +34,14 @@ const items = [
     deployed: "https://novachatbot.vercel.app",
   },
   {
-    title: "Data Extract Model",
+    title: "DATA EXTRACT MODEL",
     description:
       "ML-based image processing model that scans images containing measurements such as weight, height, and other metrics, and extracts relevant data.",
     image: dataextract,
     github: "https://github.com/yugalkaushik/dataextract",
   },
   {
-    title: "Explora",
+    title: "EXPLORA",
     description:
     "A comprehensive platform offering curated travel itineraries, insightful blogs, and recommended destinations to enhance your travel planning experience. Built with Next.js, TypeScript, and MongoDB for a scalable, efficient, and user-focused application.",
     image: explora,
