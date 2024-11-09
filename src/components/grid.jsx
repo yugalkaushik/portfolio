@@ -43,7 +43,7 @@ const items = [
   {
     title: "EXPLORA",
     description:
-    "A comprehensive platform offering curated travel itineraries, insightful blogs, and recommended destinations to enhance your travel planning experience. Built with Next.js, TypeScript, and MongoDB for a scalable, efficient, and user-focused application.",
+      "A comprehensive platform offering curated travel itineraries, insightful blogs, and recommended destinations to enhance your travel planning experience. Built with Next.js, TypeScript, and MongoDB for a scalable, efficient, and user-focused application.",
     image: explora,
     github: "https://github.com/yugalkaushik/explora",
     deployed: "https://letsexplora.vercel.app",
@@ -73,7 +73,7 @@ const BentoGridItem = ({
           onLoad={() => setImageLoaded(true)}
         />
       </div>
-      
+
       <div className="flex-grow">
         <div className="flex items-center space-x-2">
           <h3 className="font-bold text-lg">{title}</h3>
