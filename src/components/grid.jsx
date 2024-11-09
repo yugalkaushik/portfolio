@@ -62,7 +62,7 @@ const BentoGridItem = ({
 
   return (
     <div
-      className={`p-4 bg-white border-2 border-black rounded-xl shadow ${className}`}
+      className={`p-4 bg-white border-2 border-black rounded-xl shadow h-full flex flex-col ${className}`}
     >
       <div className="mb-4 border border-gray-700 rounded-xl">
         {!imageLoaded && <Skeleton />}
@@ -73,16 +73,20 @@ const BentoGridItem = ({
           onLoad={() => setImageLoaded(true)}
         />
       </div>
-      <div className="flex items-center space-x-2">
-        <h3 className="font-bold text-lg">{title}</h3>
+      
+      <div className="flex-grow">
+        <div className="flex items-center space-x-2">
+          <h3 className="font-bold text-lg">{title}</h3>
+        </div>
+        <p className="text-sm text-neutral-700">{description}</p>
       </div>
-      <p className="text-sm text-neutral-700 mb-4">{description}</p>
-      <div className="flex space-x-4 justify-center">
+
+      <div className="flex space-x-4 justify-center mt-4">
         <a
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full text-center hover:text-white border p-1 rounded-md hover:bg-black"
+          className="w-full text-center hover:text-white border p-1 rounded-md hover:bg-black transition-colors"
         >
           GitHub
         </a>
@@ -91,7 +95,7 @@ const BentoGridItem = ({
             href={deployed}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full text-center hover:text-white border p-1 rounded-md hover:bg-black"
+            className="w-full text-center hover:text-white border p-1 rounded-md hover:bg-black transition-colors"
           >
             Website
           </a>
