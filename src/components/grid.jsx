@@ -3,7 +3,7 @@ import sparkle from "../assets/sparkle.png";
 import sms from "../assets/sms.png";
 import explora from "../assets/explora.png";
 import chatbot from "../assets/chatbot.png";
-import dataextract from "../assets/dataextract.png";
+import thecipher from "../assets/thecipher.png";
 
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-32 min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
@@ -34,11 +34,12 @@ const items = [
     deployed: "https://novachatbot.vercel.app",
   },
   {
-    title: "DATA EXTRACT MODEL",
+    title: "THE CIPHER",
     description:
-      "ML-based image processing model that scans images containing measurements such as weight, height, and other metrics, and extracts relevant data.",
-    image: dataextract,
-    github: "https://github.com/yugalkaushik/dataextract",
+      "TheCipher is a nostalgic front-end web application that captures the look and feel of a 90s-era newspaper. Developed with TypeScript, this project is designed to evoke the aesthetic of vintage print media with modern code practices. The interface includes retro-style fonts, grayscale imagery, and a classic layout reminiscent of newspapers from 90s.",
+    image: thecipher,
+    github: "https://github.com/yugalkaushik/thecipher",
+    deployed: "https://theciipher.vercel.app"
   },
   {
     title: "EXPLORA",
