@@ -8,6 +8,8 @@ module.exports = {
         varela: ["Varela Round", "sans-serif"],
         teko: ["Teko", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        jember: ["JemberSketch", "cursive"],
+        inter: ["Inter", "sans-serif"],
       },
       keyframes: {
         fadeIn: {

@@ -1,11 +1,11 @@
 import React from "react";
 
-const Text = () => {
-  const paragraph =
+const Text: React.FC = () => {
+  const paragraph: string =
     "I bring a unique blend of creativity and technical expertise to develop exceptional and innovative software experiences.";
 
-  const renderWords = (text, additionalClasses) => {
-    return text.split(" ").map((word, idx) => (
+  const renderWords = (text: string, additionalClasses: string): React.JSX.Element[] => {
+    return text.split(" ").map((word: string, idx: number) => (
       <span
         key={idx}
         className={`animate-fadeInDelayed ${additionalClasses}`}
@@ -19,7 +19,7 @@ const Text = () => {
   return (
     <div className="flex flex-col items-center mt-20 sm:mt-28 md:mt-32 lg:ml-40 lg:mt-56 lg:px-0 z-40 w-full sm:w-10/12 md:w-8/12 lg:w-5/12">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-9xl font-teko text-black">
-        Hi, I'm
+        Hi, I&apos;m
       </h1>
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-teko text-purple-800">
         YUGAL KAUSHIK

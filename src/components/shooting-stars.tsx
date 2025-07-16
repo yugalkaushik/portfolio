@@ -1,6 +1,34 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const getRandomStartPoint = () => {
+interface StarPosition {
+  x: number;
+  y: number;
+  angle: number;
+}
+
+interface Star {
+  id: number;
+  x: number;
+  y: number;
+  angle: number;
+  scale: number;
+  speed: number;
+  distance: number;
+}
+
+interface ShootingStarsProps {
+  minSpeed?: number;
+  maxSpeed?: number;
+  minDelay?: number;
+  maxDelay?: number;
+  starColor?: string;
+  trailColor?: string;
+  starWidth?: number;
+  starHeight?: number;
+  className?: string;
+}
+
+const getRandomStartPoint = (): StarPosition => {
   const side = Math.floor(Math.random() * 4);
   const offset = Math.random() * window.innerWidth;
 
@@ -18,7 +46,7 @@ const getRandomStartPoint = () => {
   }
 };
 
-const ShootingStars = ({
+const ShootingStars: React.FC<ShootingStarsProps> = ({
   minSpeed = 10,
   maxSpeed = 25,
   minDelay = 1200,
@@ -29,13 +57,13 @@ const ShootingStars = ({
   starHeight = 3,
   className,
 }) => {
-  const [star, setStar] = useState(null);
-  const svgRef = useRef(null);
+  const [star, setStar] = useState<Star | null>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    const createStar = () => {
+    const createStar = (): void => {
       const { x, y, angle } = getRandomStartPoint();
-      const newStar = {
+      const newStar: Star = {
         id: Date.now(),
         x,
         y,
@@ -56,9 +84,9 @@ const ShootingStars = ({
   }, [minSpeed, maxSpeed, minDelay, maxDelay]);
 
   useEffect(() => {
-    const moveStar = () => {
+    const moveStar = (): void => {
       if (star) {
-        setStar((prevStar) => {
+        setStar((prevStar: Star | null) => {
           if (!prevStar) return null;
           const newX =
             prevStar.x +

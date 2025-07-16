@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import github from "../assets/github.png";
 import resume from "../assets/resume.pdf";
 
-const ToolTip = ({ text, children }) => {
-  const [hovered, setHovered] = useState(false);
+interface ToolTipProps {
+  text: string;
+  children: React.ReactNode;
+}
+
+const ToolTip: React.FC<ToolTipProps> = ({ text, children }) => {
+  const [hovered, setHovered] = useState<boolean>(false);
 
   return (
     <div
@@ -19,11 +24,10 @@ const ToolTip = ({ text, children }) => {
       )}
     </div>
   );
-  0;
 };
 
-const Skills = () => {
-  const openResume = () => {
+const Skills: React.FC = () => {
+  const openResume = (): void => {
     window.open(resume);
   };
 
@@ -38,8 +42,8 @@ const Skills = () => {
       <div className="flex flex-col items-center  mt-2 lg:mt-10">
         <p className="text-gray-600 text-center mb-4 lg:mb-8 pr-2 pl-3 lg:pr-0 lg:pl-0">
           My resume provides a comprehensive look at the significant projects
-          I've managed, relevant experience, acquired skills, and the meaningful
-          contributions I've made.
+          I&apos;ve managed, relevant experience, acquired skills, and the meaningful
+          contributions I&apos;ve made.
         </p>
         <button
           className="border-2 border-black rounded-md hover:bg-black hover:text-white p-2 lg:m-1  font-varela w-5/12 lg:w-1/3"

@@ -6,7 +6,11 @@ import BentoGrid from "./grid";
 import Skills from "./skills";
 import { Contact } from "./contact";
 
-const Avatar = ({ src }) => {
+interface AvatarProps {
+  src: string;
+}
+
+const Avatar: React.FC<AvatarProps> = ({ src }) => {
   return (
     <img
       src={src}
@@ -16,7 +20,7 @@ const Avatar = ({ src }) => {
   );
 };
 
-const Landing = () => {
+const Landing: React.FC = () => {
   return (
     <div>
       <nav className="fixed top-0 left-0 w-full bg-transparent bg-opacity-50 text-white z-20">
