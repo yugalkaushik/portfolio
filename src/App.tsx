@@ -11,7 +11,7 @@ function App(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
       <ShootingStars />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Experience />

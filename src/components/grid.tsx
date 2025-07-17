@@ -81,30 +81,30 @@ const BentoGridItem: React.FC<BentoGridItemProps> = ({
 
   return (
     <div
-      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col"
+      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col transform"
     >
       <div className="relative">
         {!imageLoaded && <Skeleton />}
         <img
           src={image}
           alt={title}
-          className={`w-full h-48 object-cover ${!imageLoaded ? "hidden" : ""}`}
+          className={`w-full h-32 sm:h-40 md:h-48 object-cover ${!imageLoaded ? "hidden" : ""}`}
           onLoad={() => setImageLoaded(true)}
         />
       </div>
 
-      <div className="p-6 flex-grow flex flex-col">
+      <div className="p-4 sm:p-6 flex-grow flex flex-col">
         <div className="flex-grow">
-          <h3 className="font-bold text-xl text-gray-900 mb-3">{title}</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+          <h3 className="font-bold text-xl sm:text-2xl text-gray-900 mb-2 sm:mb-3 font-garamond">{title}</h3>
+          <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-garamond">{description}</p>
         </div>
 
-        <div className="flex gap-3 mt-6">
+        <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-6">
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center py-2 px-4 border-2 border-gray-900 text-gray-900 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-200 font-medium text-sm"
+            className="flex-1 text-center py-2 px-3 sm:px-4 border-2 border-gray-900 text-gray-900 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-200 font-medium text-sm sm:text-base font-garamond"
           >
             GitHub
           </a>
@@ -113,7 +113,7 @@ const BentoGridItem: React.FC<BentoGridItemProps> = ({
               href={deployed}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center py-2 px-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-sm"
+              className="flex-1 text-center py-2 px-3 sm:px-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-sm sm:text-base font-garamond"
             >
               Live Demo
             </a>
@@ -126,23 +126,21 @@ const BentoGridItem: React.FC<BentoGridItemProps> = ({
 
 const Projects: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
-  const displayedItems = showAll ? items : items.slice(0, 4);
+  const displayedItems = showAll ? items : items.slice(0, 2);
 
   return (
-    <section id="projects" className="py-20 px-4 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Projects
+    <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-retroactive">
+            PROJECTS
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 font-garamond">
             A showcase of projects demonstrating full-stack development, open-source contributions, and innovative problem-solving
           </p>
         </div>
         
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {displayedItems.map((item: ProjectItem, i: number) => (
             <BentoGridItem
               key={i}
@@ -155,12 +153,11 @@ const Projects: React.FC = () => {
           ))}
         </div>
 
-        {/* Show All Button */}
-        {items.length > 4 && (
+        {items.length > 2 && (
           <div className="text-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-8 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors duration-200 font-medium"
+              className="px-6 sm:px-8 py-2 sm:py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 font-medium transform text-base sm:text-lg font-garamond"
             >
               {showAll ? '▲ Show less' : '▼ Show all'}
             </button>

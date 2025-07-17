@@ -19,11 +19,6 @@ const Experience: React.FC = () => {
       category: "language" 
     },
     { 
-      name: "Java", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg", 
-      category: "language" 
-    },
-    { 
       name: "C++", 
       icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg", 
       category: "language" 
@@ -46,6 +41,11 @@ const Experience: React.FC = () => {
       category: "frontend" 
     },
     { 
+      name: "Vue.js", 
+      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg", 
+      category: "frontend" 
+    },
+    { 
       name: "Next.js", 
       icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg", 
       category: "frontend" 
@@ -53,11 +53,6 @@ const Experience: React.FC = () => {
     { 
       name: "Tailwind", 
       icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", 
-      category: "frontend" 
-    },
-    { 
-      name: "Bootstrap", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg", 
       category: "frontend" 
     },
     
@@ -75,11 +70,6 @@ const Experience: React.FC = () => {
     { 
       name: "MongoDB", 
       icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg", 
-      category: "backend" 
-    },
-    { 
-      name: "PostgreSQL", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg", 
       category: "backend" 
     },
     { 
@@ -120,11 +110,6 @@ const Experience: React.FC = () => {
       category: "tools" 
     },
     { 
-      name: "VS Code", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg", 
-      category: "tools" 
-    },
-    { 
       name: "Figma", 
       icon: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg", 
       category: "tools" 
@@ -145,28 +130,28 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 lg:px-8 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-4xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience & Skills</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-retroactive">EXPERIENCE & SKILLS</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 font-garamond">
             My professional journey and technical expertise
           </p>
         </div>
         
         {/* Experience */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Work Experience</h3>
-          <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+        <div className="mb-12 sm:mb-16 lg:mb-20">
+          <h3 className="text-xl sm:text-2xl font-garamond font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Work Experience</h3>
+          <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform">
             {experience.map((exp, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h4 className="text-xl font-semibold text-gray-900">{exp.role}</h4>
-                    <span className="text-sm text-gray-500">{exp.duration}</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                    <h4 className="text-xl sm:text-2xl font-garamond font-semibold text-gray-900">{exp.role}</h4>
+                    <span className="text-base sm:text-lg text-gray-500 mt-1 sm:mt-0 font-garamond">{exp.duration}</span>
                   </div>
-                  <p className="text-blue-600 font-medium">{exp.company}</p>
+                  <p className="text-blue-600 font-medium text-base sm:text-lg font-garamond">{exp.company}</p>
                 </div>
               </div>
             ))}
@@ -175,20 +160,20 @@ const Experience: React.FC = () => {
         
         {/* Skills & Tools Combined */}
         <div>
-          <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Skills & Tools</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+          <h3 className="text-xl sm:text-2xl font-garamond font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Skills & Tools</h3>
+          <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
             {skillsAndTools.map((skill, index) => (
-              <div key={index} className="bg-white p-3 rounded-lg shadow-sm border border-gray-100 flex items-center space-x-3 hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white p-2 sm:p-3 rounded-lg shadow-sm border border-gray-100 flex items-center space-x-2 sm:space-x-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
                 <img 
                   src={skill.icon} 
                   alt={skill.name} 
-                  className="w-6 h-6 object-contain flex-shrink-0"
+                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain flex-shrink-0"
                   onError={(e) => {
                     // Fallback if SVG fails to load
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <span className="text-sm font-medium text-gray-700 truncate">{skill.name}</span>
+                <span className="text-xs sm:text-base font-medium text-gray-700 font-garamond leading-tight">{skill.name}</span>
               </div>
             ))}
           </div>
