@@ -9,9 +9,9 @@ import { ShootingStars } from "./components/shooting-stars";
 
 function App(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden w-full max-w-full">
       <ShootingStars />
-      <main className="relative z-10">
+      <main className="relative z-10 w-full max-w-full">
         <Hero />
         <About />
         <Experience />

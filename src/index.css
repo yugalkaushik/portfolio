@@ -21,9 +21,11 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  zoom: 1 !important;
+  font-size: 16px !important;
 }
 
 body {
@@ -31,14 +33,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  zoom: 1;
+  -webkit-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  zoom: 1 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   width: 100%;
+  font-size: 16px !important;
+  transform: scale(1) !important;
+  transform-origin: top left !important;
 }
 
 code {
@@ -49,6 +54,22 @@ code {
 /* Prevent zoom and scaling issues */
 * {
   box-sizing: border-box;
+}
+
+/* Force consistent scaling across all elements */
+*, *::before, *::after {
+  -webkit-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
+/* Root element constraints */
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  transform: scale(1) !important;
+  transform-origin: top left !important;
 }
 
 /* Ensure consistent rendering across browsers */
@@ -133,4 +154,38 @@ img {
 /* Prevent horizontal scroll on all elements */
 * {
   box-sizing: border-box;
+}
+
+/* Handle high DPI displays and prevent scaling issues */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  html, body {
+    zoom: 1 !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  html, body {
+    zoom: 1 !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  html, body {
+    zoom: 1 !important;
+    transform: scale(1) !important;
+  }
+}
+
+/* Force consistent font rendering across all browsers */
+@media screen {
+  html {
+    font-size: 16px !important;
+  }
+  
+  body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
 }
