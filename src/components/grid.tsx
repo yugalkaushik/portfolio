@@ -104,7 +104,7 @@ const BentoGridItem: React.FC<BentoGridItemProps> = ({
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center py-2 px-3 sm:px-4 border-2 border-gray-900 text-gray-900 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-200 font-medium text-sm sm:text-base font-garamond"
+            className="flex-1 text-center py-2 px-3 sm:px-4 border-2 border-gray-900 text-black rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-200 font-medium text-sm sm:text-base font-garamond"
           >
             GitHub
           </a>
@@ -132,7 +132,7 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-retroactive">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 font-retroactive">
             PROJECTS
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 font-garamond">

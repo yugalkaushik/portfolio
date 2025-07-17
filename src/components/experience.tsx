@@ -134,7 +134,7 @@ const Experience: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-retroactive">EXPERIENCE & SKILLS</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 font-retroactive">EXPERIENCE & SKILLS</h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 font-garamond">
             My professional journey and technical expertise
           </p>
