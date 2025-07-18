@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "src/**/*": {
-      "includeFiles": "public/**"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
