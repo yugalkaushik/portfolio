@@ -17,6 +17,7 @@ module.exports = {
         cowboy: ["Madani-Bold", "serif"],
         retroactive: ["Retroactive", "sans-serif"],
         garamond: ["Cormorant Garamond", "serif"],
+        georgia: ["Georgia", "serif"],
       },
       fontSize: {
         'fluid-xs': 'clamp(0.75rem, 2vw, 0.875rem)',

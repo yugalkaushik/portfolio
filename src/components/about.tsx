@@ -21,13 +21,13 @@ const About: React.FC = () => {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-2 font-retroactive">
                 ABOUT ME
               </h2>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-garamond">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-georgia">
                 Software Engineer by day and by night
               </h3>
             </div>
             
             <div className="space-y-4">
-              <p className="text-gray-800 text-lg sm:text-xl leading-relaxed font-garamond" >
+              <p className="text-gray-800 text-lg sm:text-xl leading-relaxed font-georgia" >
                 I am Yugal Kaushik, a dedicated Software Engineer with a focus on building robust, scalable applications and contributing to open-source projects. My expertise lies in designing efficient distributed systems, optimizing backend integrations, and creating seamless user experiences through innovative web development. I thrive on solving complex technical challenges and delivering impactful solutions that enhance performance and user engagement.
               </p>
             </div>

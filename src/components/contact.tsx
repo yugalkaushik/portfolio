@@ -7,7 +7,7 @@ export const Contact: React.FC = () => {
         {/* Section Title */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 font-retroactive">GET IN TOUCH</h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 font-garamond">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 font-georgia">
             Have a project in mind or want to collaborate? I&apos;d love to hear from you. Let&apos;s build something amazing together!
           </p>
         </div>
@@ -16,8 +16,8 @@ export const Contact: React.FC = () => {
           {/* Contact Info */}
           <div className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 font-garamond">Let&apos;s Connect</h3>
-              <p className="text-gray-600 leading-relaxed mb-6 sm:mb-8 text-base sm:text-lg font-garamond">
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 font-georgia">Let&apos;s Connect</h3>
+              <p className="text-gray-600 leading-relaxed mb-6 sm:mb-8 text-base sm:text-lg font-georgia">
                 I&apos;m always interested in hearing about new opportunities, exciting projects, 
                 or just having a chat about technology and development. Feel free to reach out!
               </p>
@@ -32,8 +32,8 @@ export const Contact: React.FC = () => {
                   </svg>
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="font-medium text-gray-900 text-base sm:text-lg font-garamond">Email</h4>
-                  <a href="mailto:yugalkaushik@gmail.com" className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base break-all font-garamond">
+                  <h4 className="font-medium text-gray-900 text-base sm:text-lg font-georgia">Email</h4>
+                  <a href="mailto:yugalkaushik@gmail.com" className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base break-all font-georgia">
                     yugalkaushik.yk@gmail.com
                   </a>
                 </div>
@@ -46,8 +46,8 @@ export const Contact: React.FC = () => {
                   </svg>
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="font-medium text-gray-900 text-base sm:text-lg font-garamond">LinkedIn</h4>
-                  <a href="https://linkedin.com/in/yugalkaushik" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base break-all font-garamond">
+                  <h4 className="font-medium text-gray-900 text-base sm:text-lg font-georgia">LinkedIn</h4>
+                  <a href="https://linkedin.com/in/yugalkaushik" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base break-all font-georgia">
                     linkedin.com/in/yugalkaushik
                   </a>
                 </div>
@@ -60,8 +60,8 @@ export const Contact: React.FC = () => {
                   </svg>
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="font-medium text-gray-900 text-base sm:text-lg font-garamond">GitHub</h4>
-                  <a href="https://github.com/yugalkaushik" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base break-all font-garamond">
+                  <h4 className="font-medium text-gray-900 text-base sm:text-lg font-georgia">GitHub</h4>
+                  <a href="https://github.com/yugalkaushik" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base break-all font-georgia">
                     github.com/yugalkaushik
                   </a>
                 </div>
@@ -70,8 +70,8 @@ export const Contact: React.FC = () => {
 
             {/* Quick Response */}
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm border border-gray-100">
-              <h4 className="font-medium text-gray-900 mb-2 text-base sm:text-lg font-garamond">Quick Response</h4>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-garamond">
+              <h4 className="font-medium text-gray-900 mb-2 text-base sm:text-lg font-georgia">Quick Response</h4>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-georgia">
                 I typically respond to emails within 24 hours. For urgent matters, 
                 feel free to connect with me on LinkedIn.
               </p>

@@ -135,23 +135,23 @@ const Experience: React.FC = () => {
         {/* Section Title */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 font-retroactive">EXPERIENCE & SKILLS</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 font-garamond">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 font-georgia">
             My professional journey and technical expertise
           </p>
         </div>
         
         {/* Experience */}
         <div className="mb-12 sm:mb-16 lg:mb-20">
-          <h3 className="text-xl sm:text-2xl font-garamond font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Work Experience</h3>
+          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Work Experience</h3>
           <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform">
             {experience.map((exp, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h4 className="text-xl sm:text-2xl font-garamond font-semibold text-gray-900">{exp.role}</h4>
-                    <span className="text-base sm:text-lg text-gray-500 mt-1 sm:mt-0 font-garamond">{exp.duration}</span>
+                    <h4 className="text-xl sm:text-2xl font-georgia font-semibold text-gray-900">{exp.role}</h4>
+                    <span className="text-base sm:text-lg text-gray-500 mt-1 sm:mt-0 font-georgia">{exp.duration}</span>
                   </div>
-                  <p className="text-blue-600 font-medium text-base sm:text-lg font-garamond">{exp.company}</p>
+                  <p className="text-blue-600 font-medium text-base sm:text-lg font-georgia">{exp.company}</p>
                 </div>
               </div>
             ))}
@@ -160,7 +160,7 @@ const Experience: React.FC = () => {
         
         {/* Skills & Tools Combined */}
         <div>
-          <h3 className="text-xl sm:text-2xl font-garamond font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Skills & Tools</h3>
+          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Skills & Tools</h3>
           <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
             {skillsAndTools.map((skill, index) => (
               <div key={index} className="bg-white p-2 sm:p-3 rounded-lg shadow-sm border border-gray-100 flex items-center space-x-2 sm:space-x-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -173,7 +173,7 @@ const Experience: React.FC = () => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <span className="text-xs sm:text-base font-medium text-gray-700 font-garamond leading-tight">{skill.name}</span>
+                <span className="text-xs sm:text-base font-medium text-gray-700 font-georgia leading-tight">{skill.name}</span>
               </div>
             ))}
           </div>
