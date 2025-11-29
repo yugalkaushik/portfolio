@@ -1,130 +1,131 @@
 import React, { useState } from "react";
 
-const Experience: React.FC = () => {
-  const skillsAndTools = [
-    // Programming Languages
-    { 
-      name: "JavaScript", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg", 
-      category: "language" 
-    },
-    { 
-      name: "TypeScript", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg", 
-      category: "language" 
-    },
-    { 
-      name: "Python", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg", 
-      category: "language" 
-    },
-    { 
-      name: "C++", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg", 
-      category: "language" 
-    },
-    { 
-      name: "HTML", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg", 
-      category: "language" 
-    },
-    { 
-      name: "CSS", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg", 
-      category: "language" 
-    },
-    
-    // Frontend Frameworks
-    { 
-      name: "React", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg", 
-      category: "frontend" 
-    },
-    { 
-      name: "Vue.js", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg", 
-      category: "frontend" 
-    },
-    { 
-      name: "Next.js", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg", 
-      category: "frontend" 
-    },
-    { 
-      name: "Tailwind", 
-      icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", 
-      category: "frontend" 
-    },
-    
-    // Backend & Database
-    { 
-      name: "Node.js", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg", 
-      category: "backend" 
-    },
-    { 
-      name: "Express", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg", 
-      category: "backend" 
-    },
-    { 
-      name: "MongoDB", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg", 
-      category: "backend" 
-    },
-    { 
-      name: "MySQL", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg", 
-      category: "backend" 
-    },
-    { 
-      name: "Redis", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg", 
-      category: "backend" 
-    },
-    
-    // Tools & DevOps
-    { 
-      name: "Git", 
-      icon: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg", 
-      category: "tools" 
-    },
-    { 
-      name: "GitHub", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg", 
-      category: "tools" 
-    },
-    { 
-      name: "Docker", 
-      icon: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg", 
-      category: "tools" 
-    },
-    { 
-      name: "Linux", 
-      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg", 
-      category: "tools" 
-    },
-    { 
-      name: "Postman", 
-      icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg", 
-      category: "tools" 
-    }
-  ];
+const skillsAndTools = [
+  // Programming Languages
+  { 
+    name: "JavaScript", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg", 
+    category: "language" 
+  },
+  { 
+    name: "TypeScript", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg", 
+    category: "language" 
+  },
+  { 
+    name: "Python", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg", 
+    category: "language" 
+  },
+  { 
+    name: "C++", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg", 
+    category: "language" 
+  },
+  { 
+    name: "HTML", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg", 
+    category: "language" 
+  },
+  { 
+    name: "CSS", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg", 
+    category: "language" 
+  },
+  
+  // Frontend Frameworks
+  { 
+    name: "React", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg", 
+    category: "frontend" 
+  },
+  { 
+    name: "Vue.js", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg", 
+    category: "frontend" 
+  },
+  { 
+    name: "Next.js", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg", 
+    category: "frontend" 
+  },
+  { 
+    name: "Tailwind", 
+    icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", 
+    category: "frontend" 
+  },
+  
+  // Backend & Database
+  { 
+    name: "Node.js", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg", 
+    category: "backend" 
+  },
+  { 
+    name: "Express", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg", 
+    category: "backend" 
+  },
+  { 
+    name: "MongoDB", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg", 
+    category: "backend" 
+  },
+  { 
+    name: "MySQL", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg", 
+    category: "backend" 
+  },
+  { 
+    name: "Redis", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg", 
+    category: "backend" 
+  },
+  
+  // Tools & DevOps
+  { 
+    name: "Git", 
+    icon: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg", 
+    category: "tools" 
+  },
+  { 
+    name: "GitHub", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg", 
+    category: "tools" 
+  },
+  { 
+    name: "Docker", 
+    icon: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg", 
+    category: "tools" 
+  },
+  { 
+    name: "Linux", 
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg", 
+    category: "tools" 
+  },
+  { 
+    name: "Postman", 
+    icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg", 
+    category: "tools" 
+  }
+];
 
-  const experiences = [
-    {
-      role: "Software Engineer Intern",
-      company: "PRODINIT Software Solutions",
-      location: "Gurugram, India",
-      from: "July 2025",
-      to: "Oct 2025",
-      summary: [
-        "ProdInit Website: Collaborated with the development team to rebuild and launch the Prodinit website, learning about user experience and deployment.",
-        "Testing Framework: Developing a testing framework for ElevenLabs conversational agents, integrating custom LLM personas to evaluate agent performance in chat-based interactions and conversation flows.",
-        "Voice AI Eval: Worked on Voice AI Evaluation and Automation project leveraging Pipecat for voice agent orchestration and Langfuse for conversation tracking and analytics, enabling structured evaluation of LLM-driven conversational systems."
-      ]
-    }
-  ];
+const experiences = [
+  {
+    role: "Software Developer Intern",
+    company: "PRODINIT Software Solutions",
+    location: "Gurugram, India",
+    from: "July 2025",
+    to: "Oct 2025",
+    summary: [
+      "ProdInit Website: Collaborated with the development team to rebuild and launch the Prodinit website, learning about user experience and deployment.",
+      "Testing Framework: Developing a testing framework for ElevenLabs conversational agents, integrating custom LLM personas to evaluate agent performance in chat-based interactions and conversation flows.",
+      "Voice AI Eval: Worked on Voice AI Evaluation and Automation project leveraging Pipecat for voice agent orchestration and Langfuse for conversation tracking and analytics, enabling structured evaluation of LLM-driven conversational systems."
+    ]
+  }
+];
+
+const Experience: React.FC = () => {
 
   return (
     <section id="experience" className="section-pad px-4 sm:px-6 lg:px-8 bg-zinc-950">
@@ -159,6 +160,8 @@ const Experience: React.FC = () => {
                   src={skill.icon} 
                   alt={skill.name} 
                   className="w-5 h-5 sm:w-6 sm:h-6 object-contain flex-shrink-0"
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     // Fallback if SVG fails to load
                     e.currentTarget.style.display = 'none';
@@ -189,7 +192,7 @@ type ExperienceCardProps = {
   experience: ExperienceItem;
 };
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
+const ExperienceCardComponent: React.FC<ExperienceCardProps> = ({ experience }) => {
   const [open, setOpen] = useState(false);
 
   const toggle = () => setOpen((prev) => !prev);
@@ -247,3 +250,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
     </div>
   );
 };
+
+const ExperienceCard = React.memo(ExperienceCardComponent);
+ExperienceCard.displayName = "ExperienceCard";

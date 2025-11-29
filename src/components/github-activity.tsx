@@ -18,6 +18,8 @@ const GitHubActivity: React.FC = () => {
                 src="https://ghchart.rshah.org/409ba5/yugalkaushik"
                 alt="GitHub Contribution Chart"
                 className="w-full max-w-4xl mx-auto"
+                loading="lazy"
+                decoding="async"
                 style={{ imageRendering: 'pixelated' }}
               />
             </div>

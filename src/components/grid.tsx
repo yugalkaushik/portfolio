@@ -74,6 +74,8 @@ const BentoGridItem: React.FC<BentoGridItemProps> = ({
           src={image}
           alt={title}
           className={`w-full h-32 sm:h-40 md:h-48 object-cover ${!imageLoaded ? "hidden" : ""}`}
+          loading="lazy"
+          decoding="async"
           onLoad={() => setImageLoaded(true)}
         />
       </div>

@@ -21,6 +21,8 @@ const About: React.FC = () => {
                 src={profileImage} 
                 alt="Yugal Kaushik" 
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
