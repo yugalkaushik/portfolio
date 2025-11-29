@@ -24,7 +24,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-size: 16px;
+  font-size: clamp(15px, 1vw + 12px, 16px);
 }
 
 body {
@@ -394,11 +394,11 @@ img {
 /* Force consistent font rendering across all browsers */
 @media screen {
   html {
-    font-size: 16px !important;
+    font-size: clamp(15px, 1vw + 12px, 16px) !important;
   }
   
   body {
-    font-size: 16px !important;
+    font-size: clamp(15px, 1vw + 12px, 16px) !important;
     line-height: 1.5 !important;
   }
 }
