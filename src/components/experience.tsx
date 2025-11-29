@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Experience: React.FC = () => {
   const skillsAndTools = [
@@ -100,18 +100,8 @@ const Experience: React.FC = () => {
       category: "tools" 
     },
     { 
-      name: "Vercel", 
-      icon: "https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg", 
-      category: "tools" 
-    },
-    { 
       name: "Linux", 
       icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg", 
-      category: "tools" 
-    },
-    { 
-      name: "Figma", 
-      icon: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg", 
       category: "tools" 
     },
     { 
@@ -121,49 +111,50 @@ const Experience: React.FC = () => {
     }
   ];
 
-  const experience = [
+  const experiences = [
     {
-      company: "PERSIST VENTURES",
-      role: "Web Developer Intern",
-      duration: "August 2024 - September 2024"
+      role: "Software Developer Intern",
+      company: "PRODINIT Software Solutions",
+      location: "Gurugram, India",
+      from: "July 2025",
+      to: "Oct 2025",
+      summary: [
+        "ProdInit Website: Collaborated with the development team to rebuild and launch the Prodinit website, learning about user experience and deployment.",
+        "Testing Framework: Developing a testing framework for ElevenLabs conversational agents, integrating custom LLM personas to evaluate agent performance in chat-based interactions and conversation flows.",
+        "Voice AI Eval: Worked on Voice AI Evaluation and Automation project leveraging Pipecat for voice agent orchestration and Langfuse for conversation tracking and analytics, enabling structured evaluation of LLM-driven conversational systems."
+      ]
     }
   ];
 
   return (
-    <section id="experience" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="section-pad px-4 sm:px-6 lg:px-8 bg-zinc-950">
+      <div className="max-w-5xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-4 font-retroactive">EXPERIENCE & SKILLS</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 font-georgia">
+        <div className="text-center section-header">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-400 font-anton tracking-wide">
+            EXPERIENCE & SKILLS
+          </h2>
+          <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto px-4 font-georgia mt-3">
             My professional journey and technical expertise
           </p>
         </div>
         
         {/* Experience */}
-        <div className="mb-12 sm:mb-16 lg:mb-20">
-          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Work Experience</h3>
-          <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform">
-            {experience.map((exp, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h4 className="text-xl sm:text-2xl font-georgia font-semibold text-gray-900">{exp.role}</h4>
-                    <span className="text-base sm:text-lg text-gray-500 mt-1 sm:mt-0 font-georgia">{exp.duration}</span>
-                  </div>
-                  <p className="text-blue-600 font-medium text-base sm:text-lg font-georgia">{exp.company}</p>
-                </div>
-              </div>
+        <div className="section-header">
+          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-white text-center mb-4 sm:mb-6">Work Experience</h3>
+          <div className="space-y-4 sm:space-y-5">
+            {experiences.map((exp, index) => (
+              <ExperienceCard key={index} experience={exp} />
             ))}
           </div>
         </div>
         
         {/* Skills & Tools Combined */}
         <div>
-          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-gray-900 mb-6 sm:mb-8 text-center">Skills & Tools</h3>
+          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-white text-center section-header">Skills & Tools</h3>
           <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
             {skillsAndTools.map((skill, index) => (
-              <div key={index} className="bg-white p-2 sm:p-3 rounded-lg shadow-sm border border-gray-100 flex items-center space-x-2 sm:space-x-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+              <div key={index} className="glass p-2 sm:p-3 rounded-uniform shadow-sm border-min flex items-center space-x-2 sm:space-x-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 corner-shine-blue">
                 <img 
                   src={skill.icon} 
                   alt={skill.name} 
@@ -173,7 +164,7 @@ const Experience: React.FC = () => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <span className="text-xs sm:text-base font-medium text-gray-700 font-georgia leading-tight">{skill.name}</span>
+                <span className="text-xs sm:text-base font-medium text-zinc-300 font-georgia leading-tight">{skill.name}</span>
               </div>
             ))}
           </div>
@@ -184,3 +175,75 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
+
+interface ExperienceItem {
+  role: string;
+  company: string;
+  location: string;
+  from: string;
+  to: string;
+  summary: string[];
+}
+
+type ExperienceCardProps = {
+  experience: ExperienceItem;
+};
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => setOpen((prev) => !prev);
+
+  const handleKeyToggle = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggle();
+    }
+  };
+
+  return (
+    <div
+      className="glass rounded-uniform p-5 sm:p-6 shadow-lg border-min corner-shine-blue cursor-pointer select-none focus-visible:outline-none focus-visible:ring-0"
+      role="button"
+      tabIndex={0}
+      onClick={toggle}
+      onKeyDown={handleKeyToggle}
+    >
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h4 className="text-xl sm:text-2xl font-georgia font-semibold text-white">{experience.role}</h4>
+          <p className="text-blue-300 font-medium text-base sm:text-lg font-georgia">{experience.company}</p>
+        </div>
+        <div className="text-sm sm:text-base text-zinc-400 font-georgia text-left sm:text-right">
+          <p>{experience.from} – {experience.to}</p>
+          <p>{experience.location}</p>
+        </div>
+      </div>
+      <div className="flex justify-center mt-2 pointer-events-none">
+        <span className={`text-blue-200 transition-transform ${open ? "rotate-180" : "rotate-0"}`}>
+          <svg
+            className="w-4 h-4 sm:w-5 sm:h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </span>
+      </div>
+      {open && (
+        <ul className="mt-4 space-y-2 text-zinc-300 text-sm sm:text-base font-georgia">
+          {experience.summary.map((point, idx) => (
+            <li key={idx} className="flex gap-2">
+              <span className="text-blue-400 mt-1">•</span>
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};

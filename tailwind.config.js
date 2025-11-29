@@ -8,12 +8,6 @@ module.exports = {
         '3xl': '1600px',
       },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
-        varela: ["Varela Round", "sans-serif"],
-        teko: ["Teko", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
-        jember: ["JemberSketch", "cursive"],
-        inter: ["Inter", "sans-serif"],
         cowboy: ["Madani-Bold", "serif"],
         retroactive: ["Retroactive", "sans-serif"],
         garamond: ["Cormorant Garamond", "serif"],

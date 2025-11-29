@@ -3,11 +3,20 @@ import profileImage from "../assets/profile.jpg";
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+    <section id="about" className="section-pad px-4 sm:px-6 lg:px-8 bg-zinc-950">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center section-header">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-400 mb-2 font-anton">
+            ABOUT ME
+          </h2>
+          <p className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto font-georgia">
+            Software Engineer by day and by night
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           <div className="relative order-2 lg:order-1">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-lg">
+            <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto lg:mx-0 rounded-uniform overflow-hidden shadow-2xl border-min glass corner-shine-blue">
               <img 
                 src={profileImage} 
                 alt="Yugal Kaushik" 
@@ -16,18 +25,9 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          <div className="space-y-6 order-1 lg:order-2 text-center lg:text-left">
-            <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-900 mb-2 font-retroactive">
-                ABOUT ME
-              </h2>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 font-georgia">
-                Software Engineer by day and by night
-              </h3>
-            </div>
-            
-            <div className="space-y-4">
-              <p className="text-gray-800 text-lg sm:text-xl leading-relaxed font-georgia" >
+          <div className="space-y-4 order-1 lg:order-2 text-center lg:text-left h-full">
+            <div className="block-gap glass rounded-uniform border-min p-5 corner-shine-blue h-full flex">
+              <p className="text-zinc-300 text-lg sm:text-xl leading-relaxed font-georgia" >
                 I am Yugal Kaushik, a dedicated Software Engineer with a focus on building robust, scalable applications and contributing to open-source projects. My expertise lies in designing efficient distributed systems, optimizing backend integrations, and creating seamless user experiences through innovative web development. I thrive on solving complex technical challenges and delivering impactful solutions that enhance performance and user engagement.
               </p>
             </div>

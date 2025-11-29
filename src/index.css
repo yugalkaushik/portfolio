@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @font-face {
   font-family: 'Madani-Bold';
   src: url('/Madani-Bold.otf') format('opentype');
@@ -47,6 +47,60 @@ code {
     monospace;
 }
 
+/* Glassmorphism utilities */
+@layer utilities {
+  /* Display font for hero name */
+  .font-anton {
+    font-family: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  /* Global spacing utilities for consistent rhythm */
+  .section-pad {
+    padding-top: 1rem; /* py-4 mobile tighter */
+    padding-bottom: 1rem;
+  }
+  @media (min-width: 640px) { /* sm */
+    .section-pad {
+      padding-top: 1.5rem; /* py-6 */
+      padding-bottom: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) { /* lg */
+    .section-pad {
+      padding-top: 2.5rem; /* py-10 desktop unchanged */
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  .section-header {
+    margin-bottom: 1rem; /* mb-4 mobile tighter */
+  }
+  @media (min-width: 640px) {
+    .section-header { margin-bottom: 1.5rem; /* mb-6 */ }
+  }
+  @media (min-width: 1024px) {
+    .section-header { margin-bottom: 2.5rem; /* mb-10 */ }
+  }
+
+  .block-gap { /* vertical stack spacing */
+    > * + * { margin-top: 1rem; } /* space-y-4 */
+  }
+  @media (min-width: 640px) {
+    .block-gap > * + * { margin-top: 1rem; } /* keep compact on tablet */
+  }
+  .glass {
+    background-color: rgba(24, 24, 27, 0.55); /* zinc-950 ~ */
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-strong {
+    background-color: rgba(24, 24, 27, 0.7);
+    backdrop-filter: blur(16px) saturate(130%);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
 /* Prevent zoom and scaling issues */
 * {
   box-sizing: border-box;
@@ -64,8 +118,6 @@ code {
   width: 100% !important;
   max-width: 100% !important;
   overflow-x: hidden !important;
-  transform: scale(1) !important;
-  transform-origin: top left !important;
 }
 
 /* Ensure consistent rendering across browsers */
@@ -123,6 +175,191 @@ html, body {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
   }
+
+  /* Uniform rounded radius and minimal border utilities */
+  .rounded-uniform {
+    border-radius: 0.75rem; /* matches rounded-xl */
+  }
+  .border-min {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+  }
+
+  /* Hero visual treatments */
+  .hero-glow {
+    position: relative;
+  }
+  .hero-glow::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 900px);
+    height: min(90vw, 900px);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(59,130,246,0.20) 0%, rgba(59,130,246,0.08) 35%, rgba(59,130,246,0.00) 70%);
+    filter: blur(24px);
+    opacity: 0.65;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .text-hero {
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+  }
+  .underline-accent {
+    position: relative;
+  }
+  .underline-accent::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(59,130,246,0.35) 50%, rgba(255,255,255,0.15) 100%);
+  }
+
+  /* Shiny sweep hover effect */
+  .shine-on-hover {
+    position: relative;
+    overflow: hidden;
+  }
+  .shine-on-hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(59,130,246,0) 0%, rgba(59,130,246,0.18) 50%, rgba(59,130,246,0) 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+  }
+  .shine-on-hover:hover::after {
+    left: 150%;
+    transition: left 600ms ease;
+  }
+
+  /* Persistent corner royal blue glow on hover */
+  .corner-shine-blue {
+    position: relative;
+    overflow: hidden;
+  }
+  .corner-shine-blue::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(14,165,233,0.35) 0%,
+      rgba(30,144,255,0.28) 5%,
+      rgba(59,130,246,0.16) 20%,
+      rgba(59,130,246,0.08) 50%,
+      rgba(59,130,246,0.00) 100%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease;
+  }
+  .corner-shine-blue:hover::after {
+    opacity: 1;
+  }
+
+  .nav-button {
+    overflow: hidden;
+  }
+  .nav-button-bg {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid transparent;
+    pointer-events: none;
+    transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+  .nav-button:hover .nav-button-bg {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.22), rgba(14, 165, 233, 0.12));
+    border-color: rgba(59, 130, 246, 0.45);
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+    transform: scale(1.05);
+  }
+  .nav-button:active .nav-button-bg {
+    transform: scale(0.97);
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.45), rgba(59, 130, 246, 0.25));
+    border-color: rgba(125, 211, 252, 0.55);
+  }
+
+}
+
+@property --nav-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes bottomNavBorderSweep {
+  to {
+    --nav-angle: 360deg;
+  }
+}
+
+@layer components {
+  .bottom-nav-shell {
+    --bottom-nav-radius: 32px;
+    position: relative;
+    display: inline-flex;
+    border-radius: var(--bottom-nav-radius);
+    isolation: isolate;
+    overflow: visible;
+  }
+  .bottom-nav-shell::before {
+    content: "";
+    position: absolute;
+    inset: -18px;
+    border-radius: calc(var(--bottom-nav-radius) + 24px);
+    background: radial-gradient(60% 140% at 50% 20%, rgba(59,130,246,0.35) 0%, rgba(14,165,233,0.2) 35%, rgba(15,23,42,0) 70%);
+    filter: blur(32px);
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .bottom-nav-shell::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: calc(var(--bottom-nav-radius) + 8px);
+    background:
+      conic-gradient(
+        from var(--nav-angle),
+        rgba(14, 165, 233, 0) 0deg,
+        rgba(37, 99, 235, 0.35) 45deg,
+        rgba(14, 165, 233, 0.85) 120deg,
+        rgba(125, 211, 252, 0.95) 150deg,
+        rgba(14, 165, 233, 0.85) 195deg,
+        rgba(37, 99, 235, 0.35) 245deg,
+        rgba(14, 165, 233, 0) 360deg
+      );
+    animation: bottomNavBorderSweep 2.4s linear infinite;
+    filter: drop-shadow(0 0 22px rgba(59, 130, 246, 0.65));
+    pointer-events: none;
+    z-index: 1;
+    -webkit-mask: radial-gradient(
+      circle at center,
+      transparent calc(100% - 4px),
+      #ffffff calc(100% - 2px)
+    );
+    mask: radial-gradient(
+      circle at center,
+      transparent calc(100% - 4px),
+      #ffffff calc(100% - 2px)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bottom-nav-shell::after {
+    animation: none;
+  }
 }
 
 /* Smooth transitions for all interactive elements */
@@ -152,27 +389,7 @@ img {
   box-sizing: border-box;
 }
 
-/* Handle high DPI displays and prevent scaling issues */
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-  html, body {
-    zoom: 1 !important;
-    transform: scale(1) !important;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  html, body {
-    zoom: 1 !important;
-    transform: scale(1) !important;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
-  html, body {
-    zoom: 1 !important;
-    transform: scale(1) !important;
-  }
-}
+/* Handle high DPI displays without forcing zoom, letting the browser scale naturally */
 
 /* Force consistent font rendering across all browsers */
 @media screen {
