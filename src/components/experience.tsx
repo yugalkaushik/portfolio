@@ -113,7 +113,7 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
-      role: "Software Developer Intern",
+      role: "Software Engineer Intern",
       company: "PRODINIT Software Solutions",
       location: "Gurugram, India",
       from: "July 2025",
