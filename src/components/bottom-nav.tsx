@@ -31,12 +31,12 @@ const BottomNav: React.FC = () => {
       className="fixed left-1/2 -translate-x-1/2 z-[9999]"
       style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 10px)" }}
     >
-      <div className="bottom-nav-shell rounded-[32px]">
+      <div className="bottom-nav-shell rounded-uniform">
         <Dock
           direction="middle"
-          magnification={44}
-          distance={100}
-          className="glass rounded-[32px] relative z-[2] flex justify-center items-center px-4 sm:px-12 py-5 sm:py-7 gap-3 sm:gap-5"
+          magnification={40}
+          distance={90}
+          className="glass rounded-uniform relative z-[2] flex justify-center items-center px-3 sm:px-8 py-3 sm:py-5 gap-2 sm:gap-4"
         >
         {DATA.navbar.map((item) => (
           <DockIcon key={item.label}>
@@ -48,12 +48,12 @@ const BottomNav: React.FC = () => {
                 onClick={() => scrollToSection(item.id)}
                 aria-label={item.label}
                 className={cn(
-                  "nav-button h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-full bg-transparent text-zinc-400 hover:text-zinc-100",
-                  "border-0 relative"
+                  "nav-button h-7 w-7 sm:h-9 sm:w-9 flex items-center justify-center rounded-full bg-transparent text-zinc-400 hover:text-zinc-100",
+                  "border-0 relative pointer-events-auto z-50"
                 )}
               >
                 <span className="nav-button-bg absolute inset-0 rounded-full"></span>
-                <item.icon className="relative z-10" style={{ width: '18px', height: '18px' }} />
+                <item.icon className="relative z-10" style={{ width: '16px', height: '16px' }} />
               </button>
             </div>
           </DockIcon>

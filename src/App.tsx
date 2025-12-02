@@ -19,7 +19,7 @@ const SectionSkeleton = () => (
 function App(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-200 relative overflow-x-hidden w-full max-w-full">
-      <div className="h-12" />
+      <div className="h-8" />
       <main className="relative z-10 w-full max-w-full">
         <Hero />
         <Suspense fallback={<SectionSkeleton />}>
@@ -38,7 +38,7 @@ function App(): React.JSX.Element {
           <Contact />
         </Suspense>
       </main>
-      <div className="h-24 sm:h-28" />
+      <div className="h-20 sm:h-24" />
       <Suspense fallback={null}>
         <BottomNav />
       </Suspense>

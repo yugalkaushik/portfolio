@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import sparkle from "../assets/sparkle.png";
-import chatbot from "../assets/chatbot.png";
+import whisperspace from "../assets/whisperspace.png";
 import thecipher from "../assets/thecipher.png";
 import p5editor from "../assets/P5editor.png";
 
@@ -21,9 +21,9 @@ const items: ProjectItem[] = [
   {
     title: "WHISPERSPACE",
     description: "Privacy-first real-time messaging platform serving 50+ concurrent users with ephemeral message storage eliminating 90% database overhead, Google OAuth authentication, Socket.io WebSocket communication managing dynamic rooms with automated cleanup.",
-    image: chatbot,
+    image: whisperspace,
     github: "https://github.com/yugalkaushik/WhisperSpace",
-    deployed: undefined,
+    deployed: "https://whisperspacee.vercel.app",
   },
   {
     title: "P5.JS WEB EDITOR CONTRIBUTIONS",
@@ -68,30 +68,30 @@ const BentoGridItem: React.FC<BentoGridItemProps> = ({
     <div
       className="rounded-uniform shadow-lg glass overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col border-min corner-shine-blue"
     >
-      <div className="relative">
+      <div className="relative min-h-[7rem] sm:min-h-[8rem] md:min-h-[10rem]">
         {!imageLoaded && <Skeleton />}
         <img
           src={image}
           alt={title}
-          className={`w-full h-32 sm:h-40 md:h-48 object-cover ${!imageLoaded ? "hidden" : ""}`}
-          loading="lazy"
+          className={`w-full h-28 sm:h-32 md:h-40 object-cover ${!imageLoaded ? "opacity-0 absolute" : "opacity-100"}`}
+          loading="eager"
           decoding="async"
           onLoad={() => setImageLoaded(true)}
         />
       </div>
 
-      <div className="p-4 sm:p-6 flex-grow flex flex-col">
+      <div className="p-3 sm:p-4 flex-grow flex flex-col">
         <div className="flex-grow">
-          <h3 className="font-bold text-xl sm:text-2xl text-white mb-2 sm:mb-3 font-georgia">{title}</h3>
-          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed font-georgia">{description}</p>
+          <h3 className="font-bold text-lg sm:text-xl text-white mb-2 font-georgia">{title}</h3>
+          <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed font-georgia">{description}</p>
         </div>
 
-        <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-6">
+        <div className="flex gap-2 mt-3 sm:mt-4">
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 text-center py-2 px-3 sm:px-4 glass text-white rounded-uniform transition-colors duration-200 font-medium text-sm sm:text-base font-georgia border-min hover:bg-white/10 corner-shine-blue"
+            className="flex-1 text-center py-1.5 px-2 sm:px-3 glass text-white rounded-uniform transition-colors duration-200 font-medium text-xs sm:text-sm font-georgia border-min hover:bg-white/10 corner-shine-blue"
           >
             GitHub
           </a>
@@ -100,7 +100,7 @@ const BentoGridItem: React.FC<BentoGridItemProps> = ({
               href={deployed}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center py-2 px-3 sm:px-4 glass text-white rounded-uniform transition-colors duration-200 font-medium text-sm sm:text-base font-georgia border-min hover:bg-white/10 corner-shine-blue"
+              className="flex-1 text-center py-1.5 px-2 sm:px-3 glass text-white rounded-uniform transition-colors duration-200 font-medium text-xs sm:text-sm font-georgia border-min hover:bg-white/10 corner-shine-blue"
             >
               Live Demo
             </a>
@@ -119,15 +119,15 @@ const Projects: React.FC = () => {
     <section id="projects" className="section-pad px-4 sm:px-6 lg:px-8 bg-zinc-950">
       <div className="max-w-5xl mx-auto">
         <div className="text-center section-header">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-400 mb-4 font-anton">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-400 mb-4 font-anton">
             PROJECTS
           </h2>
-          <p className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto px-4 font-georgia">
+          <p className="text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto px-4 font-georgia">
             A showcase of projects demonstrating full-stack development, open-source contributions, and innovative problem-solving
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 mb-5 sm:mb-6">
           {displayedItems.map((item: ProjectItem, i: number) => (
             <BentoGridItem
               key={i}
@@ -144,7 +144,7 @@ const Projects: React.FC = () => {
           <div className="text-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-zinc-900 border border-zinc-700 rounded-lg text-white hover:bg-zinc-800 hover:shadow-xl transition-colors duration-200 font-medium text-base sm:text-lg font-georgia flex items-center gap-2 mx-auto"
+              className="px-5 sm:px-6 py-2 sm:py-3 bg-zinc-900 border border-zinc-700 rounded-uniform text-white hover:bg-zinc-800 hover:shadow-xl transition-colors duration-200 font-medium text-sm sm:text-base font-georgia flex items-center gap-3 mx-auto"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />

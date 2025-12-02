@@ -132,18 +132,18 @@ const Experience: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         {/* Section Title */}
         <div className="text-center section-header">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-400 font-anton tracking-wide">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-400 font-anton tracking-wide">
             EXPERIENCE & SKILLS
           </h2>
-          <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto px-4 font-georgia mt-3">
+          <p className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto px-4 font-georgia mt-3">
             My professional journey and technical expertise
           </p>
         </div>
         
         {/* Experience */}
         <div className="section-header">
-          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-white text-center mb-4 sm:mb-6">Work Experience</h3>
-          <div className="space-y-4 sm:space-y-5">
+          <h3 className="text-lg sm:text-xl font-georgia font-semibold text-white text-center mb-3 sm:mb-4">Work Experience</h3>
+          <div className="space-y-3 sm:space-y-4">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} experience={exp} />
             ))}
@@ -152,14 +152,14 @@ const Experience: React.FC = () => {
         
         {/* Skills & Tools Combined */}
         <div>
-          <h3 className="text-xl sm:text-2xl font-georgia font-semibold text-white text-center section-header">Skills & Tools</h3>
+          <h3 className="text-lg sm:text-xl font-georgia font-semibold text-white text-center section-header">Skills & Tools</h3>
           <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
             {skillsAndTools.map((skill, index) => (
-              <div key={index} className="glass p-2 sm:p-3 rounded-uniform shadow-sm border-min flex items-center space-x-2 sm:space-x-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 corner-shine-blue">
+              <div key={index} className="glass p-1.5 sm:p-2 rounded-uniform shadow-sm border-min flex items-center space-x-1.5 sm:space-x-2 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 corner-shine-blue">
                 <img 
                   src={skill.icon} 
                   alt={skill.name} 
-                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain flex-shrink-0"
+                  className="w-4 h-4 sm:w-5 sm:h-5 object-contain flex-shrink-0"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => {
@@ -206,7 +206,7 @@ const ExperienceCardComponent: React.FC<ExperienceCardProps> = ({ experience }) 
 
   return (
     <div
-      className="glass rounded-uniform p-5 sm:p-6 shadow-lg border-min corner-shine-blue cursor-pointer select-none focus-visible:outline-none focus-visible:ring-0"
+      className="glass rounded-uniform p-4 sm:p-5 shadow-lg border-min corner-shine-blue cursor-pointer select-none focus-visible:outline-none focus-visible:ring-0"
       role="button"
       tabIndex={0}
       onClick={toggle}
@@ -214,8 +214,8 @@ const ExperienceCardComponent: React.FC<ExperienceCardProps> = ({ experience }) 
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
-          <h4 className="text-xl sm:text-2xl font-georgia font-semibold text-white">{experience.role}</h4>
-          <p className="text-blue-300 font-medium text-base sm:text-lg font-georgia">{experience.company}</p>
+          <h4 className="text-lg sm:text-xl font-georgia font-semibold text-white">{experience.role}</h4>
+          <p className="text-blue-300 font-medium text-sm sm:text-base font-georgia">{experience.company}</p>
         </div>
         <div className="text-sm sm:text-base text-zinc-400 font-georgia text-left sm:text-right">
           <p>{experience.from} – {experience.to}</p>
@@ -225,7 +225,7 @@ const ExperienceCardComponent: React.FC<ExperienceCardProps> = ({ experience }) 
       <div className="flex justify-center mt-2 pointer-events-none">
         <span className={`text-blue-200 transition-transform ${open ? "rotate-180" : "rotate-0"}`}>
           <svg
-            className="w-4 h-4 sm:w-5 sm:h-5"
+            className="w-3 h-3 sm:w-4 sm:h-4"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
