@@ -40,22 +40,20 @@ const BottomNav: React.FC = () => {
         >
         {DATA.navbar.map((item) => (
           <DockIcon key={item.label}>
-            <div className="relative group">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full hidden group-hover:block text-white text-xs sm:text-sm tracking-wide pointer-events-none px-3 py-1">
+            <button
+              onClick={() => scrollToSection(item.id)}
+              aria-label={item.label}
+              className={cn(
+                "nav-button h-7 w-7 sm:h-9 sm:w-9 flex items-center justify-center rounded-full bg-transparent text-zinc-400 hover:text-zinc-100",
+                "border-0 relative pointer-events-auto z-50 touch-manipulation"
+              )}
+            >
+              <span className="nav-button-bg absolute inset-0 rounded-full"></span>
+              <item.icon className="relative z-10" style={{ width: '16px', height: '16px' }} />
+              <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full opacity-0 hover:opacity-100 text-white text-xs sm:text-sm tracking-wide pointer-events-none px-3 py-1 transition-opacity">
                 {item.label}
-              </div>
-              <button
-                onClick={() => scrollToSection(item.id)}
-                aria-label={item.label}
-                className={cn(
-                  "nav-button h-7 w-7 sm:h-9 sm:w-9 flex items-center justify-center rounded-full bg-transparent text-zinc-400 hover:text-zinc-100",
-                  "border-0 relative pointer-events-auto z-50"
-                )}
-              >
-                <span className="nav-button-bg absolute inset-0 rounded-full"></span>
-                <item.icon className="relative z-10" style={{ width: '16px', height: '16px' }} />
-              </button>
-            </div>
+              </span>
+            </button>
           </DockIcon>
         ))}
         </Dock>
